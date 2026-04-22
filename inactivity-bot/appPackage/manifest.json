@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.20",
+  "version": "1.0.4",
+  "id": "caa374f8-4a22-4573-b3f3-a0c3dd920ffd",
+  "name": {
+    "short": "inactivity-bot",
+    "full": "Inactivity Bot"
+  },
+  "developer": {
+    "name": "Microsoft",
+    "mpnId": "",
+    "websiteUrl": "https://microsoft.com",
+    "privacyUrl": "https://privacy.microsoft.com/privacystatement",
+    "termsOfUseUrl": "https://www.microsoft.com/legal/terms-of-use"
+  },
+  "description": {
+    "short": "Bot that watches chat inactivity and sends reminders.",
+    "full": "Bot that replies in Teams chats and sends inactivity reminders to the same chat after a period of no messages."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "caa374f8-4a22-4573-b3f3-a0c3dd920ffd",
+      "scopes": ["personal", "groupChat", "team"],
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false
+    }
+  ],
+  "staticTabs": [
+    {
+      "entityId": "conversations",
+      "scopes": ["personal"]
+    },
+    {
+      "entityId": "about",
+      "scopes": ["personal"]
+    }
+  ],
+  "validDomains": [
+    "*.botframework.com"
+  ],
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "type": "Application",
+          "name": "ChatMessage.Read.Chat"
+        },
+        {
+          "type": "Application",
+          "name": "ChannelMessage.Read.Group"
+        }
+      ]
+    }
+  },
+  "defaultInstallScope": "personal",
+  "webApplicationInfo": {
+    "id": "caa374f8-4a22-4573-b3f3-a0c3dd920ffd",
+    "resource": "api://botid-caa374f8-4a22-4573-b3f3-a0c3dd920ffd"
+  }
+}
